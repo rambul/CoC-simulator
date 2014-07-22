@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="css/normalize.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+		<!--
+
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.min.js"></script>
+		<link rel="stylesheet/less" type="text/css" href="less/lesshat.less" />
+
+		//-->
+
+		<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<script>
+
+		$.fn.makeDraggableElementOnScreen = function(){
+			this.draggable({
+				grid: [20,20],
+				start: $(this).removeClass("newElementOnScreen")
+			}).addClass("newElementOnScreen");
+			return this;
+		}
+
+		$(document).ready(function(){
+			$("body").on("click",".item",function(){
+				$("body").append($(this).find(".active img").clone().makeDraggableElementOnScreen());
+			});
+
+			$(".item").on("click",".control",function(e){
+				var actionId = $(this).attr("id");
+				e.stopPropagation();
+				(actionId == "increase") ? levelup($(this)) : leveldown($(this));
+			});
+
+			levelup = function(el){
+				if(el.closest(".item").find(".level.active").hasClass("last")){
+					return false;
+				}
+				item = el.closest(".item").find(".active").removeClass("active").next(".level").addClass("active");
+			}
+
+			leveldown = function(el){
+				if(el.closest(".item").find(".level.active").hasClass("first")){
+					return false;
+				}
+				item = el.closest(".item").find(".active").removeClass("active").prev(".level").addClass("active");
+			}
+		});
+		</script>
+	</head>
+	<body>
+		<aside id="sidebar">
+			<ul class="items-nav">
+				<li><a href="#">Defense Buildings</a></li>
+				<li><a href="#">Walls</a></li>
+				<li><a href="#">Traps</a></li>
+				<li><a href="#">Army Buildings</a></li>
+				<li><a href="#">Resource Buildings</a></li>
+				<li><a href="#">Clan Castle</a></li>
+				<li><a href="#">Town Hall</a></li>
+			</ul>
+			<ul class="items">
+				<li class="item">
+					<ul class="controls">
+						<li class="control" id="increase">+</li>
+						<li class="control" id="decrease">-</li>
+					</ul>
+
+					<div class="level active first" id="archer-tower-1">
+						<img src="graphics/defense/Archer Tower/Archer_Tower 1.png">
+					</div>
+					<div class="level" id="archer-tower-2">
+						<img src="graphics/defense/Archer Tower/Archer_Tower 2.png">
+					</div>
+					<div class="level" id="archer-tower-3">
+						<img src="graphics/defense/Archer Tower/Archer_Tower 3.png">
+					</div>
+					<div class="level" id="archer-tower-4">
+						<img src="graphics/defense/Archer Tower/Archer_Tower 4.png">
+					</div>
+					<div class="level" id="archer-tower-5">
+						<img src="graphics/defense/Archer Tower/Archer_Tower 5.png">
+					</div>
+					<div class="level" id="archer-tower-6">
+						<img src="graphics/defense/Archer Tower/Archer_Tower 6.png">
+					</div>
+					<div class="level" id="archer-tower-7">
+						<img src="graphics/defense/Archer Tower/Archer_Tower 7.png">
+					</div>
+					<div class="level" id="archer-tower-8">
+						<img src="graphics/defense/Archer Tower/Archer_Tower 8.png">
+					</div>
+					<div class="level" id="archer-tower-9">
+						<img src="graphics/defense/Archer Tower/Archer_Tower 9.png">
+					</div>
+					<div class="level" id="archer-tower-10">
+						<img src="graphics/defense/Archer Tower/Archer_Tower 10.png">
+					</div>
+					<div class="level" id="archer-tower-11">
+						<img src="graphics/defense/Archer Tower/Archer_Tower 11.png">
+					</div>
+					<div class="level last" id="archer-tower-12">
+						<img src="graphics/defense/Archer Tower/Archer_Tower 12.png">
+					</div>
+				</li>
+				<li class="item">
+					<ul class="controls">
+						<li class="control" id="increase">+</li>
+						<li class="control" id="decrease">-</li>
+					</ul>
+
+					<div class="level active first" id="air-defense-1">
+						<img src="graphics/defense/Air Defense/AirDefence 1.png">
+					</div>
+					<div class="level" id="air-defense-2">
+						<img src="graphics/defense/Air Defense/AirDefence 2.png">
+					</div>
+					<div class="level" id="air-defense-3">
+						<img src="graphics/defense/Air Defense/AirDefence 3.png">
+					</div>
+					<div class="level" id="air-defense-4">
+						<img src="graphics/defense/Air Defense/AirDefence 4.png">
+					</div>
+					<div class="level" id="air-defense-5">
+						<img src="graphics/defense/Air Defense/AirDefence 5.png">
+					</div>
+					<div class="level" id="air-defense-6">
+						<img src="graphics/defense/Air Defense/AirDefence 6.png">
+					</div>
+					<div class="level" id="air-defense-7">
+						<img src="graphics/defense/Air Defense/AirDefence 7.png">
+					</div>
+					<div class="level last" id="air-defense-8">
+						<img src="graphics/defense/Air Defense/AirDefence 8.png">
+					</div>
+				</li>
+				<li class="item">
+					<ul class="controls">
+						<li class="control" id="increase">+</li>
+						<li class="control" id="decrease">-</li>
+					</ul>
+
+					<div class="level active first" id="cannon-1">
+						<img src="graphics/defense/Cannon/Cannon 1.png">
+					</div>
+					<div class="level" id="cannon-2">
+						<img src="graphics/defense/Cannon/Cannon 2.png">
+					</div>
+					<div class="level" id="cannon-3">
+						<img src="graphics/defense/Cannon/Cannon 3.png">
+					</div>
+					<div class="level" id="cannon-4">
+						<img src="graphics/defense/Cannon/Cannon 4.png">
+					</div>
+					<div class="level" id="cannon-5">
+						<img src="graphics/defense/Cannon/Cannon 5.png">
+					</div>
+					<div class="level" id="cannon-6">
+						<img src="graphics/defense/Cannon/Cannon 6.png">
+					</div>
+					<div class="level" id="cannon-7">
+						<img src="graphics/defense/Cannon/Cannon 7.png">
+					</div>
+					<div class="level" id="cannon-8">
+						<img src="graphics/defense/Cannon/Cannon 8.png">
+					</div>
+					<div class="level" id="cannon-9">
+						<img src="graphics/defense/Cannon/Cannon 9.png">
+					</div>
+					<div class="level" id="cannon-10">
+						<img src="graphics/defense/Cannon/Cannon 10.png">
+					</div>
+					<div class="level" id="cannon-11">
+						<img src="graphics/defense/Cannon/Cannon 11.png">
+					</div>
+					<div class="level last" id="cannon-12">
+						<img src="graphics/defense/Cannon/Cannon 12.png">
+					</div>
+				</li>
+				<li class="item">
+					<ul class="controls">
+						<li class="control" id="increase">+</li>
+						<li class="control" id="decrease">-</li>
+					</ul>
+
+					<div class="level active first" id="hidden-tesla-1">
+						<img src="graphics/defense/Hidden Tesla/Hidden_Tesla 1.png">
+					</div>
+					<div class="level" id="hidden-tesla-2">
+						<img src="graphics/defense/Hidden Tesla/Hidden_Tesla 2.png">
+					</div>
+					<div class="level" id="hidden-tesla-3">
+						<img src="graphics/defense/Hidden Tesla/Hidden_Tesla 3.png">
+					</div>
+					<div class="level" id="hidden-tesla-4">
+						<img src="graphics/defense/Hidden Tesla/Hidden_Tesla 4.png">
+					</div>
+					<div class="level" id="hidden-tesla-5">
+						<img src="graphics/defense/Hidden Tesla/Hidden_Tesla 5.png">
+					</div>
+					<div class="level" id="hidden-tesla-6">
+						<img src="graphics/defense/Hidden Tesla/Hidden_Tesla 6.png">
+					</div>
+					<div class="level last" id="hidden-tesla-7">
+						<img src="graphics/defense/Hidden Tesla/Hidden_Tesla 7.png">
+					</div>
+				</li>
+				<li class="item">
+					<ul class="controls">
+						<li class="control" id="increase">+</li>
+						<li class="control" id="decrease">-</li>
+					</ul>
+
+					<div class="level active first" id="inferno-tower-1">
+						<img src="graphics/defense/Inferno Tower/Inferno 1.png">
+					</div>
+					<div class="level" id="inferno-tower-2">
+						<img src="graphics/defense/Inferno Tower/Inferno 2.png">
+					</div>
+					<div class="level last" id="inferno-tower-3">
+						<img src="graphics/defense/Inferno Tower/Inferno 3.png">
+					</div>
+				</li>
+				<li class="item">
+					<ul class="controls">
+						<li class="control" id="increase">+</li>
+						<li class="control" id="decrease">-</li>
+					</ul>
+
+					<div class="level active first" id="mortar-1">
+						<img src="graphics/defense/Mortar/Mortar 1.png">
+					</div>
+					<div class="level" id="mortar-2">
+						<img src="graphics/defense/Mortar/Mortar 2.png">
+					</div>
+					<div class="level" id="mortar-3">
+						<img src="graphics/defense/Mortar/Mortar 3.png">
+					</div>
+					<div class="level" id="mortar-4">
+						<img src="graphics/defense/Mortar/Mortar 4.png">
+					</div>
+					<div class="level" id="mortar-5">
+						<img src="graphics/defense/Mortar/Mortar 5.png">
+					</div>
+					<div class="level" id="mortar-6">
+						<img src="graphics/defense/Mortar/Mortar 6.png">
+					</div>
+					<div class="level" id="mortar-7">
+						<img src="graphics/defense/Mortar/Mortar 7.png">
+					</div>
+					<div class="level last" id="mortar-8">
+						<img src="graphics/defense/Mortar/Mortar 8.png">
+					</div>
+				</li>
+				<li class="item">
+					<ul class="controls">
+						<li class="control" id="increase">+</li>
+						<li class="control" id="decrease">-</li>
+					</ul>
+
+					<div class="level active first" id="wizard-1">
+						<img src="graphics/defense/Wizard Tower/Wizard_Tower 1.png">
+					</div>
+					<div class="level" id="wizard-2">
+						<img src="graphics/defense/Wizard Tower/Wizard_Tower 2.png">
+					</div>
+					<div class="level" id="wizard-3">
+						<img src="graphics/defense/Wizard Tower/Wizard_Tower 3.png">
+					</div>
+					<div class="level" id="wizard-4">
+						<img src="graphics/defense/Wizard Tower/Wizard_Tower 4.png">
+					</div>
+					<div class="level" id="wizard-5">
+						<img src="graphics/defense/Wizard Tower/Wizard_Tower 5.png">
+					</div>
+					<div class="level" id="wizard-6">
+						<img src="graphics/defense/Wizard Tower/Wizard_Tower 6.png">
+					</div>
+					<div class="level" id="wizard-7">
+						<img src="graphics/defense/Wizard Tower/Wizard_Tower 7.png">
+					</div>
+					<div class="level last" id="wizard-8">
+						<img src="graphics/defense/Wizard Tower/Wizard_Tower 8.png">
+					</div>
+				</li>
+				<li class="item">
+					<ul class="controls">
+						<li class="control" id="increase">+</li>
+						<li class="control" id="decrease">-</li>
+					</ul>
+
+					<div class="level active first" id="xbow-1">
+						<img src="graphics/defense/X Bow/Xbow 1.png">
+					</div>
+					<div class="level" id="xbow-2">
+						<img src="graphics/defense/X Bow/Xbow 2.png">
+					</div>
+					<div class="level" id="xbow-3">
+						<img src="graphics/defense/X Bow/Xbow 3.png">
+					</div>
+					<div class="level last" id="xbow-4">
+						<img src="graphics/defense/X Bow/Xbow 4.png">
+					</div>
+				</li>
+			</ul>
+		</aside>
+	</body>
+</html>
