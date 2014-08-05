@@ -1,6 +1,9 @@
 @import "lesshat.less";
 @import "normalize.css";
 
+@sideBgColor: #efe691;
+@sideBgInactive: #d4ca6f;
+
 body{
   background: url(../images/grass.png) 0 0 repeat;
 }
@@ -14,35 +17,37 @@ body{
   width: 524px;
   .items-nav{
     .rotate(-90deg);
-    left: -378px;
+    left: -377px;
     list-style: none;
     position: absolute;
-    top: 600px;
+    top: 400px;
     width: 890px;
-  }
-}
-
-.items-nav{
-  li{
-    .border-radius(15px 15px 0 0);
-    background: #efe691;
-    border: 7px solid #4a4947;
-    border-bottom: 0;
-    height: 30px;
-    padding: 10px;
-    margin-right: 10px;
-    float:left;
-    font-size: 14px;
-    list-style: none;
-    padding: 5px 10px;
-    max-width: 100px;
-    a{
-      color: #c01d08;
-      font-weight: bold;
-      text-decoration: none;
-      text-transform: uppercase;
-      &:hover{
-        color: #e06d38;
+    li{
+      .border-radius(15px 15px 0 0);
+      background: @sideBgInactive;
+      border: 4px solid #4a4947;
+      border-bottom: 0;
+      float:left;
+      font-size: 14px;
+      height: 30px;
+      line-height: 30px;
+      list-style: none;
+      margin-right: 2px;
+      max-width: 100px;
+      padding: 10px;
+      padding: 5px 10px;
+      text-align: center;
+      &.active{
+        background: @sideBgColor;
+      }
+      a{
+        color: #c01d08;
+        font-weight: bold;
+        text-decoration: none;
+        text-transform: uppercase;
+        &:hover{
+          color: #e06d38;
+        }
       }
     }
   }

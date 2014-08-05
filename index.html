@@ -52,19 +52,26 @@
 				}
 				item = el.closest(".item").find(".active").removeClass("active").prev(".level").addClass("active");
 			}
+
+			$(document).on("click",".items-nav li",function(){
+				$(".items").hide();
+				$("#"+$(this).attr("data-active-pane")).show();
+				$(".items-nav li").removeClass("active");
+				$(this).addClass("active");
+			});
+
 		});
 		</script>
 	</head>
 	<body>
 		<aside id="sidebar">
 			<ul class="items-nav">
-				<li><a href="#">Defense Buildings</a></li>
-				<li><a href="#">Walls</a></li>
+				<li data-active-pane="walls"><a href="#">Walls</a></li>
 				<li><a href="#">Traps</a></li>
-				<li><a href="#">Army Buildings</a></li>
-				<li><a href="#">Resource Buildings</a></li>
+				<li><a href="#">Army</a></li>
+				<li><a href="#">Resource</a></li>
 				<li><a href="#">Clan Castle</a></li>
-				<li><a href="#">Town Hall</a></li>
+				<li class="active" data-active-pane="defense"><a href="#">Defense</a></li>
 			</ul>
 			<ul class="items" id="defense">
 				<li class="item">
@@ -312,6 +319,8 @@
 						<img src="graphics/defense/X Bow/Xbow 4.png">
 					</div>
 				</li>
+			</ul>
+			<ul class="items" id="walls">
 			</ul>
 		</aside>
 	</body>
