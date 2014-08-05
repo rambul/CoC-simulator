@@ -2,7 +2,7 @@
 @import "normalize.css";
 
 @sideBgColor: #efe691;
-@sideBgInactive: #d4ca6f;
+@sideBgInactive: #d0bf78;
 
 body{
   background: url(../images/grass.png) 0 0 repeat;
@@ -17,22 +17,22 @@ body{
   width: 524px;
   .items-nav{
     .rotate(-90deg);
-    left: -377px;
+    left: -378px;
     list-style: none;
     position: absolute;
-    top: 400px;
+    top: 300px;
     width: 890px;
     li{
       .border-radius(15px 15px 0 0);
       background: @sideBgInactive;
-      border: 4px solid #4a4947;
+      border: 6px solid #4a4947;
       border-bottom: 0;
       float:left;
       font-size: 14px;
       height: 30px;
       line-height: 30px;
       list-style: none;
-      margin-right: 2px;
+      margin-right: 3px;
       max-width: 100px;
       padding: 10px;
       padding: 5px 10px;
@@ -55,12 +55,16 @@ body{
 
 .items{
   bottom: 0;
+  display: none;
   left: 150px;
   list-style: none;
+  overflow-y: auto;
   position: absolute;
   top: 145px;
   width: 200px;
-  overflow-y: auto;
+  &#defense{
+    display: block;
+  }
   li{
     &.item{
       -webkit-user-select: none;

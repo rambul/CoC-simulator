@@ -66,11 +66,10 @@
 	<body>
 		<aside id="sidebar">
 			<ul class="items-nav">
-				<li data-active-pane="walls"><a href="#">Walls</a></li>
-				<li><a href="#">Traps</a></li>
-				<li><a href="#">Army</a></li>
-				<li><a href="#">Resource</a></li>
-				<li><a href="#">Clan Castle</a></li>
+				<li data-active-pane="other"><a href="#">Other</a></li>
+				<li data-active-pane="traps"><a href="#">Traps</a></li>
+				<li data-active-pane="army"><a href="#">Army</a></li>
+				<li data-active-pane="resource"><a href="#">Resource</a></li>
 				<li class="active" data-active-pane="defense"><a href="#">Defense</a></li>
 			</ul>
 			<ul class="items" id="defense">
@@ -320,8 +319,376 @@
 					</div>
 				</li>
 			</ul>
-			<ul class="items" id="walls">
+
+
+			<ul class="items" id="resource">
+				<li class="item">
+					<div class="level active first" id="builder-1">
+						<img src="graphics/resource/Builder's Hut/Builder_Hut.png">
+					</div>
+				</li>
+				<li class="item">
+					<ul class="controls">
+						<li class="control" id="increase">+</li>
+						<li class="control" id="decrease">-</li>
+					</ul>
+
+					<div class="level active first" id="dark-elixir-drill-1">
+						<img src="graphics/resource/Dark Elixir Drill/Dark_Elixir_Drill 1.png">
+					</div>
+					<div class="level" id="dark-elixir-drill-2">
+						<img src="graphics/resource/Dark Elixir Drill/Dark_Elixir_Drill 2.png">
+					</div>
+					<div class="level" id="dark-elixir-drill-3">
+						<img src="graphics/resource/Dark Elixir Drill/Dark_Elixir_Drill 3.png">
+					</div>
+					<div class="level" id="dark-elixir-drill-4">
+						<img src="graphics/resource/Dark Elixir Drill/Dark_Elixir_Drill 4.png">
+					</div>
+					<div class="level last" id="dark-elixir-drill-5">
+						<img src="graphics/resource/Dark Elixir Drill/Dark_Elixir_Drill 5.png">
+					</div>
+				</li>
+				<li class="item">
+					<ul class="controls">
+						<li class="control" id="increase">+</li>
+						<li class="control" id="decrease">-</li>
+					</ul>
+
+					<div class="level active first" id="dark-elixir-storage-1">
+						<img src="graphics/resource/Dark Elixir Storage/Dark_Elixir_Storage 1.png">
+					</div>
+					<div class="level" id="dark-elixir-storage-2">
+						<img src="graphics/resource/Dark Elixir Storage/Dark_Elixir_Storage 2.png">
+					</div>
+					<div class="level" id="dark-elixir-storage-3">
+						<img src="graphics/resource/Dark Elixir Storage/Dark_Elixir_Storage 3.png">
+					</div>
+					<div class="level" id="dark-elixir-storage-4">
+						<img src="graphics/resource/Dark Elixir Storage/Dark_Elixir_Storage 4.png">
+					</div>
+					<div class="level" id="dark-elixir-storage-5">
+						<img src="graphics/resource/Dark Elixir Storage/Dark_Elixir_Storage 4.png">
+					</div>
+					<div class="level last" id="dark-elixir-storage-6">
+						<img src="graphics/resource/Dark Elixir Storage/Dark_Elixir_Storage 6.png">
+					</div>
+				</li>
+				<li class="item">
+					<ul class="controls">
+						<li class="control" id="increase">+</li>
+						<li class="control" id="decrease">-</li>
+					</ul>
+
+					<div class="level active first" id="elixir-collector-1">
+						<img src="graphics/resource/Elixir Collector/Elixir_Collector 1.png">
+					</div>
+					<div class="level" id="elixir-collector-2">
+						<img src="graphics/resource/Elixir Collector/Elixir_Collector 2.png">
+					</div>
+					<div class="level" id="elixir-collector-3">
+						<img src="graphics/resource/Elixir Collector/Elixir_Collector 3.png">
+					</div>
+					<div class="level" id="elixir-collector-4">
+						<img src="graphics/resource/Elixir Collector/Elixir_Collector 4.png">
+					</div>
+					<div class="level" id="elixir-collector-5">
+						<img src="graphics/resource/Elixir Collector/Elixir_Collector 5.png">
+					</div>
+					<div class="level" id="elixir-collector-6">
+						<img src="graphics/resource/Elixir Collector/Elixir_Collector 6.png">
+					</div>
+					<div class="level" id="elixir-collector-7">
+						<img src="graphics/resource/Elixir Collector/Elixir_Collector 7.png">
+					</div>
+					<div class="level" id="elixir-collector-8">
+						<img src="graphics/resource/Elixir Collector/Elixir_Collector 8.png">
+					</div>
+					<div class="level" id="elixir-collector-9">
+						<img src="graphics/resource/Elixir Collector/Elixir_Collector 9.png">
+					</div>
+					<div class="level" id="elixir-collector-10">
+						<img src="graphics/resource/Elixir Collector/Elixir_Collector 10.png">
+					</div>
+					<div class="level last" id="elixir-collector-11">
+						<img src="graphics/resource/Elixir Collector/Elixir_Collector 11.png">
+					</div>
+				</li>
+				<li class="item">
+					<ul class="controls">
+						<li class="control" id="increase">+</li>
+						<li class="control" id="decrease">-</li>
+					</ul>
+
+					<div class="level active first" id="elixir-storage-1">
+						<img src="graphics/resource/Elixir Storage/Elixir_Storage 1.png">
+					</div>
+					<div class="level" id="elixir-storage-2">
+						<img src="graphics/resource/Elixir Storage/Elixir_Storage 2.png">
+					</div>
+					<div class="level" id="elixir-storage-3">
+						<img src="graphics/resource/Elixir Storage/Elixir_Storage 3.png">
+					</div>
+					<div class="level" id="elixir-storage-4">
+						<img src="graphics/resource/Elixir Storage/Elixir_Storage 4.png">
+					</div>
+					<div class="level" id="elixir-storage-5">
+						<img src="graphics/resource/Elixir Storage/Elixir_Storage 5.png">
+					</div>
+					<div class="level" id="elixir-storage-6">
+						<img src="graphics/resource/Elixir Storage/Elixir_Storage 6.png">
+					</div>
+					<div class="level" id="elixir-storage-7">
+						<img src="graphics/resource/Elixir Storage/Elixir_Storage 7.png">
+					</div>
+					<div class="level" id="elixir-storage-8">
+						<img src="graphics/resource/Elixir Storage/Elixir_Storage 8.png">
+					</div>
+					<div class="level" id="elixir-storage-9">
+						<img src="graphics/resource/Elixir Storage/Elixir_Storage 9.png">
+					</div>
+					<div class="level last" id="elixir-storage-10">
+						<img src="graphics/resource/Elixir Storage/Elixir_Storage 10.png">
+					</div>
+				</li>
+				<li class="item">
+					<ul class="controls">
+						<li class="control" id="increase">+</li>
+						<li class="control" id="decrease">-</li>
+					</ul>
+
+					<div class="level active first" id="gold-mine-1">
+						<img src="graphics/resource/Gold Mine/Gold_Mine 1.png">
+					</div>
+					<div class="level" id="gold-mine-2">
+						<img src="graphics/resource/Gold Mine/Gold_Mine 2.png">
+					</div>
+					<div class="level" id="gold-mine-3">
+						<img src="graphics/resource/Gold Mine/Gold_Mine 3.png">
+					</div>
+					<div class="level" id="gold-mine-4">
+						<img src="graphics/resource/Gold Mine/Gold_Mine 4.png">
+					</div>
+					<div class="level" id="gold-mine-5">
+						<img src="graphics/resource/Gold Mine/Gold_Mine 5.png">
+					</div>
+					<div class="level" id="gold-mine-6">
+						<img src="graphics/resource/Gold Mine/Gold_Mine 6.png">
+					</div>
+					<div class="level" id="gold-mine-7">
+						<img src="graphics/resource/Gold Mine/Gold_Mine 7.png">
+					</div>
+					<div class="level" id="gold-mine-8">
+						<img src="graphics/resource/Gold Mine/Gold_Mine 8.png">
+					</div>
+					<div class="level" id="gold-mine-9">
+						<img src="graphics/resource/Gold Mine/Gold_Mine 9.png">
+					</div>
+					<div class="level" id="gold-mine-10">
+						<img src="graphics/resource/Gold Mine/Gold_Mine 10.png">
+					</div>
+					<div class="level last" id="gold-mine-11">
+						<img src="graphics/resource/Gold Mine/Gold_Mine 11.png">
+					</div>
+				</li>
+				<li class="item">
+					<ul class="controls">
+						<li class="control" id="increase">+</li>
+						<li class="control" id="decrease">-</li>
+					</ul>
+
+					<div class="level active first" id="gold-storage-1">
+						<img src="graphics/resource/Gold Storage/Gold_Storage 1.png">
+					</div>
+					<div class="level" id="gold-storage-2">
+						<img src="graphics/resource/Gold Storage/Gold_Storage 2.png">
+					</div>
+					<div class="level" id="gold-storage-3">
+						<img src="graphics/resource/Gold Storage/Gold_Storage 3.png">
+					</div>
+					<div class="level" id="gold-storage-4">
+						<img src="graphics/resource/Gold Storage/Gold_Storage 4.png">
+					</div>
+					<div class="level" id="gold-storage-5">
+						<img src="graphics/resource/Gold Storage/Gold_Storage 5.png">
+					</div>
+					<div class="level" id="gold-storage-6">
+						<img src="graphics/resource/Gold Storage/Gold_Storage 6.png">
+					</div>
+					<div class="level" id="gold-storage-7">
+						<img src="graphics/resource/Gold Storage/Gold_Storage 7.png">
+					</div>
+					<div class="level" id="gold-storage-8">
+						<img src="graphics/resource/Gold Storage/Gold_Storage 8.png">
+					</div>
+					<div class="level" id="gold-storage-9">
+						<img src="graphics/resource/Gold Storage/Gold_Storage 9.png">
+					</div>
+					<div class="level last" id="gold-storage-10">
+						<img src="graphics/resource/Gold Storage/Gold_Storage 10.png">
+					</div>
+				</li>
 			</ul>
+
+
+			<ul class="items" id="army">
+
+				<li class="item">
+					<ul class="controls">
+						<li class="control" id="increase">+</li>
+						<li class="control" id="decrease">-</li>
+					</ul>
+
+					<div class="level active first" id="army-camp-1">
+						<img src="graphics/army/Army Camp/Army_Camp 1.png">
+					</div>
+					<div class="level" id="army-camp-2">
+						<img src="graphics/army/Army Camp/Army_Camp 2.png">
+					</div>
+					<div class="level" id="army-camp-3">
+						<img src="graphics/army/Army Camp/Army_Camp 3.png">
+					</div>
+					<div class="level" id="army-camp-4">
+						<img src="graphics/army/Army Camp/Army_Camp 4.png">
+					</div>
+					<div class="level" id="army-camp-5">
+						<img src="graphics/army/Army Camp/Army_Camp 5.png">
+					</div>
+					<div class="level" id="army-camp-6">
+						<img src="graphics/army/Army Camp/Army_Camp 6.png">
+					</div>
+					<div class="level" id="army-camp-7">
+						<img src="graphics/army/Army Camp/Army_Camp 7.png">
+					</div>
+					<div class="level last" id="army-camp-8">
+						<img src="graphics/army/Army Camp/Army_Camp 8.png">
+					</div>
+				</li>
+				<li class="item">
+					<ul class="controls">
+						<li class="control" id="increase">+</li>
+						<li class="control" id="decrease">-</li>
+					</ul>
+
+					<div class="level active first" id="barracks-1">
+						<img src="graphics/army/Barracks/Barracks 1.png">
+					</div>
+					<div class="level" id="barracks-2">
+						<img src="graphics/army/Barracks/Barracks 2.png">
+					</div>
+					<div class="level" id="barracks-3">
+						<img src="graphics/army/Barracks/Barracks 3.png">
+					</div>
+					<div class="level" id="barracks-4">
+						<img src="graphics/army/Barracks/Barracks 4.png">
+					</div>
+					<div class="level" id="barracks-5">
+						<img src="graphics/army/Barracks/Barracks 5.png">
+					</div>
+					<div class="level" id="barracks-6">
+						<img src="graphics/army/Barracks/Barracks 6.png">
+					</div>
+					<div class="level" id="barracks-7">
+						<img src="graphics/army/Barracks/Barracks 7.png">
+					</div>
+					<div class="level" id="barracks-8">
+						<img src="graphics/army/Barracks/Barracks 8.png">
+					</div>
+					<div class="level" id="barracks-9">
+						<img src="graphics/army/Barracks/Barracks 9.png">
+					</div>
+					<div class="level last" id="barracks-10">
+						<img src="graphics/army/Barracks/Barracks 10.png">
+					</div>
+				</li>
+				<li class="item">
+					<ul class="controls">
+						<li class="control" id="increase">+</li>
+						<li class="control" id="decrease">-</li>
+					</ul>
+
+					<div class="level active first" id="dark-barracks-1">
+						<img src="graphics/army/Dark Barracks/Darkbarracks 1.png">
+					</div>
+					<div class="level" id="dark-barracks-2">
+						<img src="graphics/army/Dark Barracks/Darkbarracks 2.png">
+					</div>
+					<div class="level" id="dark-barracks-3">
+						<img src="graphics/army/Dark Barracks/Darkbarracks 3.png">
+					</div>
+					<div class="level" id="dark-barracks-4">
+						<img src="graphics/army/Dark Barracks/Darkbarracks 4.png">
+					</div>
+					<div class="level last" id="dark-barracks-5">
+						<img src="graphics/army/Dark Barracks/Darkbarracks 5.png">
+					</div>
+				</li>
+				<li class="item">
+					<ul class="controls">
+						<li class="control" id="increase">+</li>
+						<li class="control" id="decrease">-</li>
+					</ul>
+
+					<div class="level active first" id="laboratory-1">
+						<img src="graphics/army/Laboratory/Laboratory 1.png">
+					</div>
+					<div class="level" id="laboratory-2">
+						<img src="graphics/army/Laboratory/Laboratory 2.png">
+					</div>
+					<div class="level" id="laboratory-3">
+						<img src="graphics/army/Laboratory/Laboratory 3.png">
+					</div>
+					<div class="level" id="laboratory-4">
+						<img src="graphics/army/Laboratory/Laboratory 4.png">
+					</div>
+					<div class="level" id="laboratory-5">
+						<img src="graphics/army/Laboratory/Laboratory 5.png">
+					</div>
+					<div class="level" id="laboratory-6">
+						<img src="graphics/army/Laboratory/Laboratory 6.png">
+					</div>
+					<div class="level" id="laboratory-7">
+						<img src="graphics/army/Laboratory/Laboratory 7.png">
+					</div>
+					<div class="level last" id="laboratory-8">
+						<img src="graphics/army/Laboratory/Laboratory 8.png">
+					</div>
+				</li>
+				<li class="item">
+					<ul class="controls">
+						<li class="control" id="increase">+</li>
+						<li class="control" id="decrease">-</li>
+					</ul>
+
+					<div class="level active first" id="spell-factory-1">
+						<img src="graphics/army/Spell Factory/Spell_Factory 1.png">
+					</div>
+					<div class="level" id="spell-factory-2">
+						<img src="graphics/army/Spell Factory/Spell_Factory 2.png">
+					</div>
+					<div class="level" id="spell-factory-3">
+						<img src="graphics/army/Spell Factory/Spell_Factory 3.png">
+					</div>
+					<div class="level" id="spell-factory-4">
+						<img src="graphics/army/Spell Factory/Spell_Factory 4.png">
+					</div>
+					<div class="level last" id="spell-factory-5">
+						<img src="graphics/army/Spell Factory/Spell_Factory 5.png">
+					</div>
+				</li>
+				<li class="item">
+					<div class="level active first" id="archer-queen-1">
+						<img src="graphics/army/Archer Queen Altar/Archer_queen_altar.png">
+					</div>
+				</li>
+				<li class="item">
+					<div class="level active first" id="barbarian-king-1">
+						<img src="graphics/army/Barbarian King Altar/Barbarian_king_altar.png">
+					</div>
+				</li>
+
+			</ul>
+
 		</aside>
 	</body>
 </html>
